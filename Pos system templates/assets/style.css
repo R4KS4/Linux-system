@@ -22,6 +22,7 @@ body{
     /* background-color: blue; */
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     position: relative;
+    z-index: 1;
 }
 .logo{
     width: 100px;
@@ -30,10 +31,12 @@ body{
     position: fixed;
     top: 25px;
     left: 100px; 
+    z-index: 1;
 }
 .logo img{
     width: 100%;
     height: 100%;
+    z-index: 1;
 }
 .sub-menu{
     width: 100%;
@@ -154,7 +157,7 @@ body{
 
 .add-cart{
     width: 400px;
-    height: 600px;
+    height: 620px;
     background-color: white;
     position: fixed;
     right: -80%;
@@ -163,6 +166,25 @@ body{
     border-radius: 20px;
     z-index: 20;
     transition: all 0.8s;
+    overflow: hidden;
+    border: 3px solid var(--main-color);
+}
+.container-add-cart{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    float: left;
+    overflow: hidden;
+}
+.btn-back{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    margin-bottom: 40px;
+    transition: all 0.8s;
+}
+.btn-back i{
+    font-size: 25px;
 }
 span i{
     float: right;
@@ -245,6 +267,95 @@ span i{
     border: none;
     margin-bottom: 10px;
 }
+.input-choice{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[type=checkbox]{
+    width: 25px;
+    height: 25px;
+}
+.input-choice p{
+    margin: 0px;
+    padding: 0px 10px;
+    font-weight: 600;
+}
+.time-delivery{
+    display: flex;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+}
+.name-restaurant{
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+}
+.name-order{
+    width: 80%;
+    height: 70px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(1,100%);
+    grid-template-rows: 50% 50%;
+    border-bottom: 2px solid black;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+.list-order{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.name-order p{
+    color: var(--main-color);
+    font-weight: 600;
+}
+.total{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.button-checkout{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.button-checkout button{
+    width: 70%;
+    height: 100%;
+    background-color: var(--main-color);
+    border-radius: 20px;
+    border: none;
+    font-weight: 600;
+}
+
 .button p{
     margin: 0px;
 }
@@ -282,6 +393,8 @@ span i{
     width: 80%;
     background-color: var(--main-color);
     float: right;
+    position: relative;
+    z-index: 1;
 }
 .bar ul{
     margin: 0;
